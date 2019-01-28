@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camera</title>
+    <style>
+
+
+        section {
+            margin: 0 1em;
+        }
+
+        #imgs {
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        img {
+            width: 320px;
+            height: 240px;
+        }
+
+        video {
+            transform: scale(-1, 1);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <video autoplay width="640" height="480"></video>
+        <div id="commands">
+            <button id="capture">capture</button>
+            <button id="stop">stop</button>
+        </div>
+        <canvas style="display:none;" width="640" height="480"></canvas>
+    </section>
+    <section>
+        <h2>Captures <button id="clear">Clear</button></h2>
+        <div  id="imgs"></div>
+    </section>
+</main>
+<script src="scripts/main.js"></script>
+</body>
+</html>
